@@ -34,14 +34,14 @@ Master:
     - 0.0.0.0/0
   # List of plugins to be install during Jenkins master start
   InstallPlugins:
-    - kubernetes:1.14.3
+    - kubernetes:1.14.5
     - workflow-aggregator:2.6
     - workflow-job:2.31
     - credentials-binding:1.17
-    - git:3.9.1
+    - git:3.9.3
     - greenballs:1.15
-    - blueocean:1.10.1
-    - lockable-resources:2.3
+    - blueocean:1.11.1
+    - lockable-resources:2.4
   # Used to approve a list of groovy functions in pipelines used the script-security plugin. Can be viewed under /scriptApproval
   ScriptApproval:
     - "method groovy.json.JsonSlurperClassic parseText java.lang.String"
