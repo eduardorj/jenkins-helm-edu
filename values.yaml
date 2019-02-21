@@ -16,9 +16,9 @@ Master:
   Component: "jenkins-master"
   UseSecurity: true
   AdminUser: admin
-  AdminPassword: passw0rd
-  Cpu: "2000m"
-  Memory: "5000Mi"
+  AdminPassword: admin
+  Cpu: "512m"
+  Memory: "1024Mi"
   ServicePort: 8080
   # For minikube, set this to NodePort, elsewhere use LoadBalancer
   # <to set explicitly, choose port between 30000-32767>
@@ -58,8 +58,8 @@ Agent:
   ImageTag: 3.10-1
   Component: "jenkins-slave"
   Privileged: false
-  Cpu: "400m"
-  Memory: "1000Mi"
+  Cpu: "512m"
+  Memory: "1024Mi"
   # You may want to change this to true while testing a new image
   AlwaysPullImage: false
   # You can define the volumes that you want to mount for this container
