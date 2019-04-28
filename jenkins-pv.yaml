@@ -5,7 +5,6 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: jenkins-pv
   capacity:
     storage: 8Gi
   accessModes:
