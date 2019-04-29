@@ -42,7 +42,7 @@ master:
   # a restart loop.  Likewise if you disable the non-Jenkins identity store and instead use the Jenkins internal one,
   # you should revert master.adminUser to your preferred admin user:
   adminUser: "admin"
-  # adminPassword: <defaults to random>
+  adminPassword: "admin"
   # adminSshKey: <defaults to auto-generated>
   # If CasC auto-reload is enabled, an SSH (RSA) keypair is needed.  Can either provide your own, or leave unconfigured to allow a random key to be auto-generated.
   # If you supply your own, it is recommended that the values file that contains your key not be committed to source control in an unencrypted format
@@ -79,7 +79,7 @@ master:
   servicePort: 8080
   # For minikube, set this to NodePort, elsewhere use LoadBalancer
   # Use ClusterIP if your setup includes ingress controller
-  serviceType: LoadBalancer
+  serviceType: NodePort
   # Jenkins master service annotations
   serviceAnnotations: {}
   # Jenkins master custom labels
@@ -146,14 +146,14 @@ master:
 
   # List of plugins to be install during Jenkins master start
   installPlugins:
-    - kubernetes:1.14.5
+    - kubernetes:1.15.2
     - workflow-aggregator:2.6
-    - workflow-job:2.31
-    - credentials-binding:1.17
-    - git:3.9.3
+    - workflow-job:2.32
+    - credentials-binding:1.18
+    - git:3.9.4
     - greenballs:1.15
     - blueocean:1.11.1
-    - lockable-resources:2.4    
+    - lockable-resources:2.5    
 
   # Enable to always override the installed plugins with the values of 'master.installPlugins' on upgrade or redeployment.
   # overwritePlugins: true
